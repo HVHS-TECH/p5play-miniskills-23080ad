@@ -17,24 +17,18 @@ function setup() {
 	console.log("setup: ");
 	
 	//draw the canvas
-	cnv = new Canvas(2000, 2000);
+	cnv = new Canvas(1000, 1000);
 
-	
 	//create a rectangle
-	rectangle = new Sprite(100, 100, 20, 20, 10);
+	rectangle = new Sprite(100, 100, 20, 20);
 	rectangle.color = 'green';
 
 	//create a circle
-	circle = new Sprite(200, 200, 10, 10)
-}
-	
-/*******************************************************/
-// draw()
-/*******************************************************/
-function draw() {
+	circle = new Sprite(190, 200, 300)
+	circle.color = 'red';
 
-	//color the bg
-	background('red');
+	//create a rectangle
+	rectangle = new Sprite(20, 120, 300, 30)
 }
 /*******************************************************/
 //  END OF APP

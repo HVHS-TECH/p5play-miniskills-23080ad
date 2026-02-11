@@ -28,7 +28,7 @@ function setup() {
 	circle.color = 'red';
 
 	//create a rectangle
-	rectangle = new Sprite(20, 120, 300, 30)
+	rectangle = new Sprite(20, 120, 300, 30);
 }
 /*******************************************************/
 //  END OF APP

@@ -19,17 +19,19 @@ function setup() {
 
 	//draw aliens
 
-	for (i=0; i< 100; i++){
-		alien = new Sprite(10,10,10);
+	for (i = 0; i < 90; i++) {
 
-  alien.vel.x = 3;
+  alien = new Sprite(random(0, 1000), random(0, 1000), random(30, 100), random(30, 100), 'd');
+
+  alien.vel.x = random(4, 7);
 
   alien.vel.y = 4;
 
   alien.bounciness = 1;
 
   alien.friction = 0;
-	}
+
+}
 
 	//create a platform_right
 	platform_1 = new Sprite(1000, 500, 10, 1000, 'k')

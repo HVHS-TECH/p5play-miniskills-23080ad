@@ -20,8 +20,8 @@ function setup() {
 	rectangle.vel.x = 2;
 
 	//create a circle
-	circle = new Sprite(190, 200, 300)
-	circle.color = 'red';
+	rub = new Sprite(190, 200, 300)
+	rub.color = 'red';
 
 	//create a rectangle
 	rectangle = new Sprite(20, 120, 300, 30)

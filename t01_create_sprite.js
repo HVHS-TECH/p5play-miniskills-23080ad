@@ -6,29 +6,36 @@
 	
 /*******************************************************/
 // setup()
-var width;
-var height;
-var pos_x;
-var pos_y;
-
 
 /*******************************************************/
+console.log('hello')
 function setup() {
-	console.log("setup: ");
-	
-	//draw the canvas
-	cnv = new Canvas(1000, 1000);
+width = random(300,600);
+height = random(300,600);
 
-	//create a rectangle
-	rectangle = new Sprite(100, 100, 20, 20);
-	rectangle.color = 'green';
+// and the sprites keep changing too!
+spriteX= random(50,150);
+spriteY=  random(50,150);
 
-	//create a circle
-	circle = new Sprite(190, 200, 300)
-	circle.color = 'red';
+cnv = new Canvas(width, height);
 
-	//create a rectangle
-	rectangle = new Sprite(20, 120, 300, 30);
+red = new Sprite((spriteX/2),(height-(spriteY/2)),spriteX, spriteY);
+red.color = 'red';
+
+green = new Sprite((width-(spriteX/2)),(height-(spriteY/2)),spriteX, spriteY);
+green.color = 'green';
+
+blue = new Sprite((width-(spriteX/2)),(spriteY/2),spriteX, spriteY);
+blue.color = 'blue';
+
+yellow = new Sprite((spriteX/2),(spriteY/2),spriteX, spriteY);
+yellow.color = 'yellow';
+
+purple = new Sprite(width/2,height/2,spriteX, spriteY);
+purple.color = 'purple';
+}
+function draw() {
+	background('cyan');
 }
 /*******************************************************/
 //  END OF APP

@@ -26,7 +26,7 @@ function setup() {
 function draw() {
 
 	//color the bg
-	background('black');
+	background('grey');
 
 	//movement controls
 	if (kb.pressing('left')){
@@ -61,6 +61,13 @@ function draw() {
 	if (kb.released('down')){
 		rectangle.vel.y = 0;
 	}
+
+	//text test
+	text("hello uncle", 50, 50)
+	
+	//combining text and variables
+	var name = "text";
+	text("hello "+name, 50, 100);
 
 }
 

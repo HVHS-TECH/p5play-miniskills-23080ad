@@ -8,7 +8,7 @@
 // setup()
 /*******************************************************/
 function setup() {
-	console.log("setup: ");
+	console.log("setuffgp: ");
 
 	//groups
 

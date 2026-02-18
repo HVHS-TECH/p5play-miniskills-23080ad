@@ -3,7 +3,7 @@
 // Move sprite via keyboard
 // Written by ???
 /*******************************************************/
-	
+
 /*******************************************************/
 // setup()
 /*******************************************************/
@@ -18,6 +18,17 @@ function setup() {
 	rectangle.color = 'green';
 	rectangle.rotationspeed = 2;
 	rectangle.friction = 2;
+
+	//create the floor
+	ground = new Sprite(windowWidth / 2, 940, windowWidth, 30, 's')
+
+	//set world gravity
+	world.gravity.y = 3;
+
+	//adds the player to its own group for collisionjs
+	playerGroup = new Group();
+	playerGroup.add(rectangle);
+
 }
 
 /*******************************************************/
@@ -28,46 +39,17 @@ function draw() {
 	//color the bg
 	background('grey');
 
-	//movement controls
-	if (kb.pressing('left')){
-		rectangle.vel.x = -5;
+	//jump controls
+
+	if (kb.pressing('up')) {
+		playerGroup.collides(ground, rectangle.vel.y = 3);
 	}
 
-	if (kb.pressing('right')){
-		rectangle.vel.x = 5;
-	}
 
-	if (kb.pressing('up')){
-		rectangle.vel.y = -5;
-	}
 
-	if (kb.pressing('down')){
-		rectangle.vel.y = 5;
-	}
 
-	//stoping controls
-	if (kb.released('left')){
-		rectangle.vel.x = 0;
-	}
 
-	if (kb.released('right')){
-		rectangle.vel.x = 0;
-	}
 
-	if (kb.released('up')){
-		rectangle.vel.y = 0;
-	}
-
-	if (kb.released('down')){
-		rectangle.vel.y = 0;
-	}
-
-	//text test
-	text("hello uncle", 50, 50)
-	
-	//combining text and variables
-	var name = "text";
-	text("hello "+name, 50, 100);
 
 }
 
